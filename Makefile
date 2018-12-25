@@ -12,21 +12,21 @@
 
 NAME = avm
 
-HEAD = avm.hpp\
+INCLUDE = -I ./includes/
 
 FLAGS = -Wall -Wextra -Werror
 
-SRC =	main.cpp\
+SRC = ./src/main.cpp\
 
 BINS = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(BINS) $(HEAD)
+$(NAME): $(BINS)
 	clang++ -o $(NAME) $(BINS)
 
 %.o: %.cpp
-	clang++ $(FLAGS) -o $@ -c $<
+	clang++ $(FLAGS) -o $@ -c $<  $(INCLUDE)
 
 clean:
 	rm -f $(BINS)
