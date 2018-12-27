@@ -16,7 +16,8 @@ INCLUDE = -I ./includes/
 
 FLAGS = -Wall -Wextra -Werror
 
-SRC = ./src/main.cpp\
+SRC = 	./src/main.cpp\
+		./src/ReadManager.cpp\
 
 BINS = $(SRC:.cpp=.o)
 
