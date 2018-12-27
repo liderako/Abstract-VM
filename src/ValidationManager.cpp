@@ -1,9 +1,6 @@
 #include "ValidationManager.hpp"
 
 bool ValidationManager::runValidation(std::vector<std::string> buffer) {
-	std::cmatch result;
-
-
 	std::regex regularCommand("(pop|dump|add|sub|mul|div|mod|print|exit)");
 	std::regex regularCommandWithValue("(push|assert)(\\s)(int32|int8|int16)(\\([\\d]+\\))(\\s*)");
 	std::regex regularFloatAndDouble("(push|assert)(\\s)(float|double)(\\([\\d]+\\.[\\d]+\\))(\\s*)");

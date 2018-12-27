@@ -1,11 +1,15 @@
 #include "VirtualMachine.hpp"
 #include "ReadManager.hpp"
 #include "ValidationManager.hpp"
+#include "Parser.hpp"
 
 void execution(ReadManager readManager) {
+	VirtualMachine vm;
 	ValidationManager validationManager;
+	Parser parser;
 
 	validationManager.runValidation(readManager.getInputBuffer());
+	parser.run(vm, readManager.getInputBuffer());
 }
 
 int main(int argc, char **argv) {

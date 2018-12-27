@@ -3,10 +3,13 @@
 
 #include <iostream>
 #include <vector>
+#include <regex>
+#include <string>
 #include "VirtualMachine.hpp"
 
 class Parser {
-	void run(VirtualMachine vm, std::vector<std::string> inputBuffer);
+	public:
+		void run(VirtualMachine vm, std::vector<std::string> inputBuffer);
 };
 
 #endif

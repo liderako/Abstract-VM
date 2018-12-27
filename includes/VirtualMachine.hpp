@@ -19,6 +19,7 @@ class VirtualMachine {
 
 		void setValues(std::vector<IOperand *> 	v);
 		void setCommands(std::vector<std::string>	commands);
+		void printCommands();
 };
 
 #endif

@@ -24,3 +24,9 @@ void VirtualMachine::setValues(std::vector<IOperand *> v) {
 void VirtualMachine::setCommands(std::vector<std::string>	commands){
 	this->commands = commands;
 }
+
+void VirtualMachine::printCommands() {
+	for (unsigned long i = 0; i < commands.size(); i++) {
+		std::cout << commands[i] << "\n";
+	}
+}
