@@ -6,7 +6,7 @@
 #include "VirtualMachine.hpp"
 
 class Parser {
-	void run(VirtualMachine vm);
+	void run(VirtualMachine vm, std::vector<std::string> inputBuffer);
 };
 
 #endif

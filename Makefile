@@ -20,6 +20,7 @@ SRC = 	./src/main.cpp\
 		./src/ReadManager.cpp\
 		./src/VirtualMachine.cpp\
 		./src/ValidationManager.cpp\
+		./src/Parser.cpp\
 
 BINS = $(SRC:.cpp=.o)
 
