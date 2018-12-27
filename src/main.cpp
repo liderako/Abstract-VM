@@ -1,20 +1,27 @@
 #include "VirtualMachine.hpp"
 #include "ReadManager.hpp"
+#include "ValidationManager.hpp"
 
-void runVm(char *fileName) {
-	std::cout << "file name" << fileName << "\n";
+void execution(ReadManager readManager) {
+	ValidationManager validationManager;
+
+	validationManager.runValidation(readManager.getInputBuffer());
 }
 
 int main(int argc, char **argv) {
+	ReadManager readManager;
+
 	if (argc > 2) {
 		std::cout << "Usage: ./avm or ./avm fileName";
+		return -1;
 	}
 	else if (argc == 2) {
-		ReadManager readManager;
 		readManager.readFile(argv[1]);
 		readManager.printBuffer();
+		// execution(readManager);
 	}
 	else {
-		std::cout << "standart input" << "\n";
+		readManager.readConsole();
+		execution(readManager);
 	}
 }

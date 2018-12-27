@@ -18,6 +18,8 @@ FLAGS = -Wall -Wextra -Werror
 
 SRC = 	./src/main.cpp\
 		./src/ReadManager.cpp\
+		./src/VirtualMachine.cpp\
+		./src/ValidationManager.cpp\
 
 BINS = $(SRC:.cpp=.o)
 

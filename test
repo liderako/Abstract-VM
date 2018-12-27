@@ -1,0 +1,16 @@
+;; ;; ;; ; ; ; ; ; ;;
+;;
+;;
+;;
+;; one comment
+push int32(8)
+push int16(42)
+push int8(5)
+push float(32.00)
+;;
+push float(33.33)
+push double(33.42) ;; adsada
+assert double(22.42);; sfdsfa
+add
+sub
+exit

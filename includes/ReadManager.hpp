@@ -4,6 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <sstream>
+
 
 class ReadManager {
 	private:
@@ -16,8 +18,13 @@ class ReadManager {
 		ReadManager & operator=(ReadManager const &f); // canonical
 
 		// [ACTION]
-		void read(std::string filename);
+		void readFile(std::string filename);
+		void readConsole();
 		void printBuffer();
+		void deleteComment();
+
+
+		std::vector<std::string> 	getInputBuffer();
 };
 
 #endif
