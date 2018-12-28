@@ -1,7 +1,7 @@
 #ifndef OPERAND_FACTORY
 #define OPERAND_FACTORY
 
-#include "interface/IOperand.hpp"
+#include "Operand.hpp"
 
 class OperandFactory {
 	public:

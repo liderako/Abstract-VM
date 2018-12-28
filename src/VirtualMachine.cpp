@@ -17,6 +17,12 @@ VirtualMachine & VirtualMachine::operator=(VirtualMachine const &virtualMachine)
 	return (*this);
 }
 
+void VirtualMachine::runAVM(std::vector<std::string> buffer) {
+    for (unsigned long i = 0; i < buffer.size(); i++) {
+        std::cout << buffer[i] << std::endl;
+    }
+}
+
 void VirtualMachine::setValues(std::vector<IOperand *> v) {
 	this->values = v;
 }

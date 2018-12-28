@@ -20,6 +20,8 @@ class VirtualMachine {
 		void setValues(std::vector<IOperand *> 	v);
 		void setCommands(std::vector<std::string>	commands);
 		void printCommands();
+
+        void runAVM(std::vector<std::string> buffer);
 };
 
 #endif

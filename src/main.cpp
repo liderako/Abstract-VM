@@ -6,10 +6,9 @@
 void execution(ReadManager readManager) {
 	VirtualMachine vm;
 	ValidationManager validationManager;
-	Parser parser;
 
 	validationManager.runValidation(readManager.getInputBuffer());
-	parser.run(vm, readManager.getInputBuffer());
+    vm.runAVM(readManager.getInputBuffer());
 }
 
 int main(int argc, char **argv) {

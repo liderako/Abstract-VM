@@ -22,6 +22,7 @@ SRC = 	./src/main.cpp\
 		./src/ValidationManager.cpp\
 		./src/Parser.cpp\
 		./src/Operand.cpp\
+		./src/OperandFactory.cpp\
 
 BINS = $(SRC:.cpp=.o)
 
