@@ -14,13 +14,14 @@ NAME = avm
 
 INCLUDE = -I ./includes/
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++11
 
 SRC = 	./src/main.cpp\
 		./src/ReadManager.cpp\
 		./src/VirtualMachine.cpp\
 		./src/ValidationManager.cpp\
 		./src/Parser.cpp\
+		./src/Operand.cpp\
 
 BINS = $(SRC:.cpp=.o)
 

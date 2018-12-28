@@ -2,7 +2,7 @@
 #define VIRTUALMACHINE_HPP
 
 #include <iostream>
-#include "IOperand.hpp"
+#include "interface/IOperand.hpp"
 #include <vector>
 
 class VirtualMachine {

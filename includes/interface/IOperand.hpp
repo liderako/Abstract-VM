@@ -1,5 +1,5 @@
-#ifndef IOPERAND_HPP
-#define IOPERAND_HPP
+//#ifndef IOPERAND_HPP
+//#define IOPERAND_HPP
 
 #include <iostream>
 
@@ -18,4 +18,4 @@ class IOperand {
 		virtual ~IOperand( void ) {}
 };
 
-#endif
+//#endif

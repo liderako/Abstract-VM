@@ -16,10 +16,7 @@ bool ValidationManager::runValidation(std::vector<std::string> buffer) {
 			continue ;
 		}
 		else {
-			std::cout << "_________________-";
-			std::cout << buffer[i] << std::endl;
 			std::cout << "An instruction is unknown" << std::endl; // добавить exception
-			std::cout << "________" << i << "______\n";
 			std::exit(-1);
 		}
 	}
