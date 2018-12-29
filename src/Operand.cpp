@@ -30,10 +30,10 @@ Operand<T>::~Operand() {
 template <>
 Operand<int8_t>::Operand(eOperandType type, std::string const & value) {
     try {
-        if (stoi(value) > INT8_MAX) {
+        if (stold(value) > INT8_MAX) {
             throw ExceptionOverflow();
         }
-        if (stoi(value) < INT8_MIN) {
+        if (stold(value) < INT8_MIN) {
             throw ExceptionUnderflow();
         }
     }
@@ -49,10 +49,10 @@ Operand<int8_t>::Operand(eOperandType type, std::string const & value) {
 template <>
 Operand<int16_t>::Operand(eOperandType type, std::string const & value) {
     try {
-        if (stoi(value) > INT16_MAX) {
+        if (stold(value) > INT16_MAX) {
             throw ExceptionOverflow();
         }
-        if (stoi(value) < INT16_MIN) {
+        if (stold(value) < INT16_MIN) {
             throw ExceptionUnderflow();
         }
     }
@@ -68,10 +68,10 @@ Operand<int16_t>::Operand(eOperandType type, std::string const & value) {
 template <>
 Operand<int32_t>::Operand(eOperandType type, std::string const & value) {
     try {
-        if (stol(value) > INT32_MAX) {
+        if (stold(value) > INT32_MAX) {
             throw ExceptionOverflow();
         }
-        if (stol(value) < INT32_MIN) {
+        if (stold(value) < INT32_MIN) {
             throw ExceptionUnderflow();
         }
     }
