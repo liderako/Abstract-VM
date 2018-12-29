@@ -13,8 +13,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/Operand.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Operand.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Operand.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Operand.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VirtualMachine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/VirtualMachine.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_div" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_div" afterDir="false" />
     </list>
     <ignored path="*.o" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,7 +52,7 @@
         <counts>
           <entry key="Makefile" value="2" />
           <entry key="author" value="2" />
-          <entry key="cpp" value="33" />
+          <entry key="cpp" value="38" />
           <entry key="e_test_assert" value="1" />
           <entry key="e_test_assert_empty" value="1" />
           <entry key="e_test_assert_value" value="1" />
@@ -69,7 +69,7 @@
           <entry key="e_test_type_int32_t_underflow" value="1" />
           <entry key="e_test_type_int8_t_overflow" value="3" />
           <entry key="e_test_type_int8_t_underflow" value="1" />
-          <entry key="hpp" value="40" />
+          <entry key="hpp" value="41" />
           <entry key="sh" value="1" />
           <entry key="test" value="3" />
           <entry key="test2" value="3" />
@@ -87,14 +87,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="73" />
+          <entry key="ObjectiveC" value="79" />
           <entry key="PLAIN_TEXT" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Makefile" value="30" />
-          <entry key="cpp" value="7785" />
+          <entry key="cpp" value="7925" />
           <entry key="e_test_assert" value="39" />
           <entry key="e_test_assert_empty" value="22" />
           <entry key="e_test_assert_value" value="3" />
@@ -111,13 +111,13 @@
           <entry key="e_test_type_int32_t_underflow" value="1" />
           <entry key="e_test_type_int8_t_overflow" value="34" />
           <entry key="e_test_type_int8_t_underflow" value="9" />
-          <entry key="hpp" value="956" />
+          <entry key="hpp" value="976" />
           <entry key="test2" value="141" />
           <entry key="test_add" value="48" />
           <entry key="test_d_pop" value="18" />
-          <entry key="test_div" value="8" />
+          <entry key="test_div" value="15" />
           <entry key="test_exit" value="44" />
-          <entry key="test_mod" value="3" />
+          <entry key="test_mod" value="12" />
           <entry key="test_mul" value="6" />
           <entry key="test_pop" value="65" />
           <entry key="test_print" value="23" />
@@ -127,14 +127,23 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Doxygen file" value="2" />
-          <entry key="ObjectiveC" value="8739" />
-          <entry key="PLAIN_TEXT" value="749" />
+          <entry key="ObjectiveC" value="8899" />
+          <entry key="PLAIN_TEXT" value="765" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/VirtualMachine.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-445">
+              <caret line="148" column="85" selection-start-line="148" selection-start-column="85" selection-end-line="148" selection-end-column="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Parser.cpp">
           <provider selected="true" editor-type-id="text-editor">
@@ -145,46 +154,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/VirtualMachine.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1905">
-              <caret line="127" column="5" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/Operand.hpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Operand.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="161" column="20" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="20" />
+            <state relative-caret-position="313">
+              <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
               <folding>
-                <marker date="1546100636000" expanded="true" signature="1852:1857" ph="..." />
+                <marker date="1546103403000" expanded="true" signature="1851:1856" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_mod">
+        <entry file="file://$PROJECT_DIR$/src/ValidationManager.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="5" />
+            <state relative-caret-position="465">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/e_test_mod_zero">
+        <entry file="file://$PROJECT_DIR$/test/test_mod">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
@@ -193,10 +184,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_sub">
+        <entry file="file://$PROJECT_DIR$/src/ReadManager.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="4" selection-end-line="4" selection-end-column="4" />
+            <state relative-caret-position="1110">
+              <caret line="74" column="30" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/Operand.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="55">
+              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OperandFactory.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="45" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -204,26 +222,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_div">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_add">
-          <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="10" selection-start-column="10" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/test_mul">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+              <caret selection-end-line="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -275,16 +275,16 @@
         <option value="$PROJECT_DIR$/test/test_print" />
         <option value="$PROJECT_DIR$/test/e_test_print_type" />
         <option value="$PROJECT_DIR$/test/e_test_print_not_ascii" />
-        <option value="$PROJECT_DIR$/includes/Operand.hpp" />
         <option value="$PROJECT_DIR$/src/Parser.cpp" />
-        <option value="$PROJECT_DIR$/src/VirtualMachine.cpp" />
-        <option value="$PROJECT_DIR$/test/test_mod" />
-        <option value="$PROJECT_DIR$/src/Operand.cpp" />
-        <option value="$PROJECT_DIR$/test/test_div" />
         <option value="$PROJECT_DIR$/test/e_test_mod_zero" />
         <option value="$PROJECT_DIR$/test/test_add" />
         <option value="$PROJECT_DIR$/test/test_sub" />
         <option value="$PROJECT_DIR$/test/test_mul" />
+        <option value="$PROJECT_DIR$/src/VirtualMachine.cpp" />
+        <option value="$PROJECT_DIR$/includes/Operand.hpp" />
+        <option value="$PROJECT_DIR$/test/test_div" />
+        <option value="$PROJECT_DIR$/test/test_mod" />
+        <option value="$PROJECT_DIR$/src/Operand.cpp" />
       </list>
     </option>
   </component>
@@ -347,11 +347,6 @@
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
-            <path>
-              <item name="avm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -394,12 +389,12 @@
       <updated>1545983948049</updated>
       <workItem from="1545983954480" duration="5711000" />
       <workItem from="1546019373976" duration="4951000" />
-      <workItem from="1546076244712" duration="18681000" />
+      <workItem from="1546076244712" duration="19342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29343000" />
+    <option name="totallyTimeSpent" value="30004000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -414,7 +409,7 @@
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13780779" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13780779" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -426,7 +421,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32960412" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" x="812" y="410" width="1583" height="509" id="Terminal" order="9" sideWeight="0.49968415" visible="true" weight="0.32846716" />
+      <window_info anchor="bottom" x="812" y="410" width="1583" height="509" id="Terminal" order="9" sideWeight="0.49968415" visible="true" weight="0.32846716" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50031585" side_tool="true" weight="0.43803787" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -475,13 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_comments">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -494,13 +482,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/author">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReadManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="74" column="30" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="30" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/ReadManager.hpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -600,13 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ValidationManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/e_test_type_int8_t_overflow">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -691,62 +665,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OperandFactory.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/Operand.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Parser.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VirtualMachine.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1905">
-          <caret line="127" column="5" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_div">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_mod">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/e_test_mod_zero">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Operand.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="161" column="20" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="20" />
-          <folding>
-            <marker date="1546100636000" expanded="true" signature="1852:1857" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -768,6 +690,79 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_div">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_mod">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/Operand.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Operand.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+          <folding>
+            <marker date="1546103403000" expanded="true" signature="1851:1856" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OperandFactory.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parser.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReadManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="74" column="30" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ValidationManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VirtualMachine.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-445">
+          <caret line="148" column="85" selection-start-line="148" selection-start-column="85" selection-end-line="148" selection-end-column="85" />
         </state>
       </provider>
     </entry>

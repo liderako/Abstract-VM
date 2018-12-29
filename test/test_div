@@ -1,5 +1,5 @@
-push int32(10)
 push int32(2)
+push int32(42)
 div
 dump
 exit

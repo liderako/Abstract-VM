@@ -8,6 +8,7 @@
 #include <cmath>
 #include <limits.h>
 #include <float.h>
+#include "OperandFactory.hpp"
 template <class T>
 class Operand : public IOperand {
 	public:

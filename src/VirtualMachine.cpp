@@ -146,7 +146,7 @@ void VirtualMachine::mul() {
     if (values.size() < 2) {
         throw ExceptionLessOperand();
     }
-    IOperand const *a = *(values[values.size() - 1]) * *(values[values.size() - 2]);
+    IOperand const *a = *(values[values.size() - 1]) * (*(values[values.size() - 2]));
     values.push_back(a);
     values.erase(values.end() - 2);
     values.erase(values.end() - 3);
@@ -156,7 +156,7 @@ void VirtualMachine::div() {
     if (values.size() < 2) {
         throw ExceptionLessOperand();
     }
-    IOperand const *a = *(values[values.size() - 1]) / *(values[values.size() - 2]);
+    IOperand const *a = *(values[values.size() - 1]) / (*(values[values.size() - 2]));
     values.push_back(a);
     values.erase(values.end() - 2);
     values.erase(values.end() - 3);

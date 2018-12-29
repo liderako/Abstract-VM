@@ -25,7 +25,7 @@ Operand<T>::~Operand() {
     return ;
 }
 
-////* ********* */
+///* ********* */
 
 template <>
 Operand<int8_t>::Operand(eOperandType type, std::string const & value) {
@@ -167,7 +167,8 @@ IOperand const * Operand<T>::operator/(IOperand const & rhs) const {
         std::exit(-1);
     }
     eOperandType e = (rhs.getPrecision() > this->getPrecision() ? rhs.getType() : this->getType());
-    return (new Operand(e, std::to_string(std::stod(this->toString()) / std::stod(rhs.toString()))));
+    double result = std::stod(this->toString()) / std::stod(rhs.toString());
+    return (new Operand(e, std::to_string(result)));
 }
 
 template <class T>
