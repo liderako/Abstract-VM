@@ -1,0 +1,7 @@
+push int32(0)
+push int32(1)
+push int32(2)
+dump
+pop
+dump
+exit

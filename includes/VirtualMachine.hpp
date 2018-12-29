@@ -22,7 +22,7 @@ class VirtualMachine {
     private:
         void push(std::string type, std::string value);
         void dump();
-        void assert();
+        void assert(std::string type, std::string value);
         void add();
         void sub();
         void mul();
@@ -30,8 +30,30 @@ class VirtualMachine {
         void mod();
         void exit();
         void print();
+        void pop();
 
         std::vector<IOperand const *> 	values;
+
+    class ExceptionEmptyStack : public std::exception {
+        public:
+        ExceptionEmptyStack();
+        const char * what() const throw();
+        ~ExceptionEmptyStack() throw() {}
+    };
+
+    class ExceptionAssert : public std::exception {
+        public:
+        ExceptionAssert();
+        const char * what() const throw();
+        ~ExceptionAssert() throw() {}
+    };
+
+    class ExceptionAssertTypeDifferent : public std::exception {
+        public:
+            ExceptionAssertTypeDifferent();
+            const char * what() const throw();
+            ~ExceptionAssertTypeDifferent() throw() {}
+    };
 };
 
 #endif

@@ -10,6 +10,12 @@
 class ReadManager {
 	private:
 		std::vector<std::string> 	inputBuffer;
+    class ExceptionFileDoesntExists : public std::exception {
+        public:
+            ExceptionFileDoesntExists();
+            const char * what() const throw();
+            ~ExceptionFileDoesntExists() throw() {}
+        };
 	public:
 		ReadManager(); // canonical
 		ReadManager(ReadManager const & f); // canonical

@@ -26,6 +26,16 @@ void ReadManager::readFile(std::string fileName) {
 	while (std::getline(file, line)) {
 		inputBuffer.push_back(line);
 	}
+	try {
+        if (inputBuffer.empty()) {
+            throw ExceptionFileDoesntExists();
+        }
+    }
+    catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
+        std::exit(-1);
+    }
+
 	file.close();
 	if (inputBuffer.size() > 0) {
 		deleteComment();
@@ -42,8 +52,7 @@ void ReadManager::readConsole() {
 			inputBuffer.push_back(line);
 		}
 		else {
-				std::cout << "Error read input\n";
-				std::exit(-1); ////////////////////////////////
+		    std::exit(-1);
 		}
 	}
 	if (inputBuffer.size() > 0) {
@@ -72,4 +81,10 @@ void ReadManager::deleteComment() {
 
 std::vector<std::string> 	ReadManager::getInputBuffer() {
 	return inputBuffer;
+}
+
+ReadManager::ExceptionFileDoesntExists::ExceptionFileDoesntExists() {}
+
+const char *ReadManager::ExceptionFileDoesntExists::what() const throw() {
+    return ("Exception: file doesn't exists or empty");
 }
