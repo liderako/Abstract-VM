@@ -7,8 +7,16 @@
 #include <string>
 
 class ValidationManager {
-	public:
+    public:
 		bool runValidation(std::vector<std::string> buffer);
+
+    private:
+        class ExceptionInstructionUnknown : public std::exception {
+            public:
+                ExceptionInstructionUnknown();
+                const char * what() const throw();
+                ~ExceptionInstructionUnknown() throw() {}
+        };
 };
 
 #endif

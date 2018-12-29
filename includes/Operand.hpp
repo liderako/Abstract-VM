@@ -5,6 +5,7 @@
 #include "interface/IOperand.hpp"
 #include <cstdint>
 #include <cstdlib>
+#include <cmath>
 template <class T>
 class Operand : public IOperand {
 	public:
@@ -32,6 +33,13 @@ class Operand : public IOperand {
 		std::string value;
 
         void    changeType(IOperand const & rhs);
+
+        class ExceptionDivisionByZero : public std::exception {
+            public:
+            ExceptionDivisionByZero();
+                const char * what() const throw();
+                ~ExceptionDivisionByZero() throw() {}
+        };
 };
 
 #endif
