@@ -38,6 +38,24 @@ void VirtualMachine::runAVM(std::vector<std::string> buffer) {
                 else if (action[0].compare("pop") == 0) {
                     this->pop();
                 }
+                else if (action[0].compare("add") == 0) {
+                    this->add();
+                }
+                else if (action[0].compare("sub") == 0) {
+                    this->sub();
+                }
+                else if (action[0].compare("mul") == 0) {
+                    this->mul();
+                }
+                else if (action[0].compare("div") == 0) {
+                    this->div();
+                }
+                else if (action[0].compare("mod") == 0) {
+                    this->mod();
+                }
+                else if (action[0].compare("print") == 0) {
+                    this->print();
+                }
             }
         }
     }
@@ -108,19 +126,27 @@ void VirtualMachine::assert(std::string type, std::string value) {
 }
 
 void VirtualMachine::add() {
-
+    if (values.size() < 2) {
+        throw ExceptionLessOperand();
+    }
 }
 
 void VirtualMachine::sub() {
-
+    if (values.size() < 2) {
+        throw ExceptionLessOperand();
+    }
 }
 
 void VirtualMachine::mul() {
-
+    if (values.size() < 2) {
+        throw ExceptionLessOperand();
+    }
 }
 
 void VirtualMachine::div() {
-
+    if (values.size() < 2) {
+        throw ExceptionLessOperand();
+    }
 }
 
 void VirtualMachine::pop() {
@@ -131,7 +157,9 @@ void VirtualMachine::pop() {
 }
 
 void VirtualMachine::mod() {
-
+    if (values.size() < 2) {
+        throw ExceptionLessOperand();
+    }
 }
 
 void VirtualMachine::exit() {
@@ -139,7 +167,16 @@ void VirtualMachine::exit() {
 }
 
 void VirtualMachine::print() {
-
+    if (values.empty()) {
+        throw ExceptionEmptyStack();
+    }
+    if (std::stoi(values[values.size()-1]->toString()) > INT8_MAX || std::stoi(values[values.size()-1]->toString()) < INT8_MIN) {
+        throw ExceptionASCIINOT();
+    }
+    if (values[values.size()-1]->getType() != eOperandType::Int8) {
+        throw ExceptionASCIINOT();
+    }
+    std::cout << (char)atoi(values[values.size()-1]->toString().c_str()) << std::endl;
 }
 
 
@@ -159,4 +196,16 @@ VirtualMachine::ExceptionAssertTypeDifferent::ExceptionAssertTypeDifferent() {}
 
 const char *VirtualMachine::ExceptionAssertTypeDifferent::what() const throw() {
     return ("Exception: assert is not true, type different");
+}
+
+VirtualMachine::ExceptionLessOperand::ExceptionLessOperand() {}
+
+const char *VirtualMachine::ExceptionLessOperand::what() const throw() {
+    return ("Exception: too little operand for arithmetic instruction");
+}
+
+VirtualMachine::ExceptionASCIINOT::ExceptionASCIINOT() {}
+
+const char *VirtualMachine::ExceptionASCIINOT::what() const throw() {
+    return ("Exception: values is not ascii or not 8 integer");
 }

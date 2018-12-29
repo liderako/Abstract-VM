@@ -54,6 +54,20 @@ class VirtualMachine {
             const char * what() const throw();
             ~ExceptionAssertTypeDifferent() throw() {}
     };
+
+    class ExceptionASCIINOT : public std::exception {
+        public:
+            ExceptionASCIINOT();
+            const char * what() const throw();
+            ~ExceptionASCIINOT() throw() {}
+    };
+
+    class ExceptionLessOperand : public std::exception {
+        public:
+            ExceptionLessOperand();
+            const char * what() const throw();
+            ~ExceptionLessOperand() throw() {}
+    };
 };
 
 #endif

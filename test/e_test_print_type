@@ -1,0 +1,3 @@
+push int16(48)
+print
+exit
