@@ -20,7 +20,6 @@ class Operand : public IOperand {
 
 		int getPrecision() const; // Precision of the type of the instance
 		eOperandType getType() const; // Type of the instance
-		std::string getValue() const;
 
 		IOperand const * operator+(IOperand const & rhs)const; // Sum
 		IOperand const * operator-(IOperand const & rhs)const; // Difference

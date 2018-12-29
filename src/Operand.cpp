@@ -16,6 +16,7 @@ template <class T>
 Operand<T> & Operand<T>::operator=(Operand const &operand) {
     this->type = operand.type;
     this->precision = operand.precision;
+    this->value = operand.value;
     return (*this);
 }
 
@@ -41,7 +42,8 @@ Operand<int8_t>::Operand(eOperandType type, std::string const & value) {
         std::exit(-1);
     }
     this->type = type;
-    this->value = value;
+    this->precision = type;
+    this->value = std::to_string(atoi(value.c_str()));
 }
 
 template <>
@@ -59,7 +61,8 @@ Operand<int16_t>::Operand(eOperandType type, std::string const & value) {
         std::exit(-1);
     }
     this->type = type;
-    this->value = value;
+    this->precision = type;
+    this->value = std::to_string(atoi(value.c_str()));
 }
 
 template <>
@@ -77,7 +80,8 @@ Operand<int32_t>::Operand(eOperandType type, std::string const & value) {
         std::exit(-1);
     }
     this->type = type;
-    this->value = value;
+    this->precision = type;
+    this->value = std::to_string(atoi(value.c_str()));
 }
 
 template <>
@@ -95,6 +99,7 @@ Operand<float>::Operand(eOperandType type, std::string const & value) {
         std::exit(-1);
     }
     this->type = type;
+    this->precision = type;
     this->value = value;
 }
 
@@ -113,6 +118,7 @@ Operand<double>::Operand(eOperandType type, std::string const & value) {
         std::exit(-1);
     }
     this->type = type;
+    this->precision = type;
     this->value = value;
 }
 
@@ -124,11 +130,6 @@ eOperandType Operand<T>::getType() const {
 template <class T>
 int Operand<T>::getPrecision() const {
     return (this->precision);
-}
-
-template <class T>
-std::string Operand<T>::getValue() const {
-    return (this->value);
 }
 
 template <class T>
@@ -166,7 +167,7 @@ IOperand const * Operand<T>::operator/(IOperand const & rhs) const {
         std::exit(-1);
     }
     eOperandType e = (rhs.getPrecision() > this->getPrecision() ? rhs.getType() : this->getType());
-    return (new Operand(e, std::to_string(std::stod(this->toString()) / del)));
+    return (new Operand(e, std::to_string(std::stod(this->toString()) / std::stod(rhs.toString()))));
 }
 
 template <class T>
