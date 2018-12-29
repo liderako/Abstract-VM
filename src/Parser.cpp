@@ -8,13 +8,13 @@ std::vector<std::string> 	Parser::run(std::string buffer) {
                                        "(\\s)"
                                        "(int32|int8|int16)"
                                        "(\\()"
-                                       "([\\d]+)"
+                                       "(-?[\\d]+)"
                                        "(\\))"
                                        "(\\s*)");
     std::regex regularFloatAndDouble("(push|assert)"
                                      "(\\s)(float|double)"
                                      "(\\()"
-                                     "([\\d]+\\.[\\d]+)"
+                                     "(-?[\\d]+\\.[\\d]+)"
                                      "(\\))"
                                      "(\\s*)");
     std::vector<std::string> resultString;

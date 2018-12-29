@@ -6,6 +6,8 @@
 #include <cstdint>
 #include <cstdlib>
 #include <cmath>
+#include <limits.h>
+#include <float.h>
 template <class T>
 class Operand : public IOperand {
 	public:
@@ -40,6 +42,20 @@ class Operand : public IOperand {
                 const char * what() const throw();
                 ~ExceptionDivisionByZero() throw() {}
         };
+
+    class ExceptionOverflow : public std::exception {
+        public:
+        ExceptionOverflow();
+            const char * what() const throw();
+            ~ExceptionOverflow() throw() {}
+    };
+
+    class ExceptionUnderflow : public std::exception {
+        public:
+            ExceptionUnderflow();
+            const char * what() const throw();
+            ~ExceptionUnderflow() throw() {}
+    };
 };
 
 #endif

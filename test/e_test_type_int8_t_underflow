@@ -1,0 +1,2 @@
+push int8(-129); int8 [-128 to 127]
+exit

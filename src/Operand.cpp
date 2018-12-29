@@ -28,35 +28,93 @@ Operand<T>::~Operand() {
 
 template <>
 Operand<int8_t>::Operand(eOperandType type, std::string const & value) {
+    try {
+        if (stoi(value) > INT8_MAX) {
+            throw ExceptionOverflow();
+        }
+        if (stoi(value) < INT8_MIN) {
+            throw ExceptionUnderflow();
+        }
+    }
+    catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
+        std::exit(-1);
+    }
     this->type = type;
     this->value = value;
 }
 
 template <>
 Operand<int16_t>::Operand(eOperandType type, std::string const & value) {
+    try {
+        if (stoi(value) > INT16_MAX) {
+            throw ExceptionOverflow();
+        }
+        if (stoi(value) < INT16_MIN) {
+            throw ExceptionUnderflow();
+        }
+    }
+    catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
+        std::exit(-1);
+    }
     this->type = type;
     this->value = value;
 }
 
 template <>
 Operand<int32_t>::Operand(eOperandType type, std::string const & value) {
+    try {
+        if (stol(value) > INT32_MAX) {
+            throw ExceptionOverflow();
+        }
+        if (stol(value) < INT32_MIN) {
+            throw ExceptionUnderflow();
+        }
+    }
+    catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
+        std::exit(-1);
+    }
     this->type = type;
     this->value = value;
 }
 
 template <>
 Operand<float>::Operand(eOperandType type, std::string const & value) {
+    try {
+        if (std::stod(value) > FLT_MAX) {
+            throw ExceptionOverflow();
+        }
+        if (std::stod(value) < -FLT_MAX) {
+            throw ExceptionUnderflow();
+        }
+    }
+    catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
+        std::exit(-1);
+    }
     this->type = type;
     this->value = value;
 }
 
 template <>
 Operand<double>::Operand(eOperandType type, std::string const & value) {
+    try {
+        if (std::stold(value) > DBL_MAX) {
+            throw ExceptionOverflow();
+        }
+        if (std::stold(value) < -DBL_MAX) {
+            throw ExceptionUnderflow();
+        }
+    }
+    catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
+        std::exit(-1);
+    }
     this->type = type;
     this->value = value;
 }
-
-////
 
 template <class T>
 eOperandType Operand<T>::getType() const {
@@ -132,4 +190,21 @@ Operand<T>::ExceptionDivisionByZero::ExceptionDivisionByZero() {}
 template <class T>
 const char *Operand<T>::ExceptionDivisionByZero::what() const throw() {
     return ("Exception: Division by zero");
+}
+
+template <class T>
+Operand<T>::ExceptionOverflow::ExceptionOverflow() {}
+
+template <class T>
+const char *Operand<T>::ExceptionOverflow::what() const throw() {
+    return ("Exception: overflow type");
+}
+
+
+template <class T>
+Operand<T>::ExceptionUnderflow::ExceptionUnderflow() {}
+
+template <class T>
+const char *Operand<T>::ExceptionUnderflow::what() const throw() {
+    return ("Exception: underflow type");
 }

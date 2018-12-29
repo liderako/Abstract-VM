@@ -3,8 +3,8 @@
 bool ValidationManager::runValidation(std::vector<std::string> buffer) {
 	std::regex regularCommand("(pop|dump|add|sub|mul|div|mod|print)");
     std::regex regularCommandExit("(exit)");
-	std::regex regularCommandWithValue("(push|assert)(\\s)(int32|int8|int16)(\\([\\d]+\\))(\\s*)");
-	std::regex regularFloatAndDouble("(push|assert)(\\s)(float|double)(\\([\\d]+\\.[\\d]+\\))(\\s*)");
+	std::regex regularCommandWithValue("(push|assert)(\\s)(int32|int8|int16)(\\(-?[\\d]+\\))(\\s*)");
+	std::regex regularFloatAndDouble("(push|assert)(\\s)(float|double)(\\(-?[\\d]+\\.[\\d]+\\))(\\s*)");
 
 	int exitExists = 0;
 
@@ -37,11 +37,11 @@ bool ValidationManager::runValidation(std::vector<std::string> buffer) {
 ValidationManager::ExceptionInstructionUnknown::ExceptionInstructionUnknown() {}
 
 const char *ValidationManager::ExceptionInstructionUnknown::what() const throw() {
-    return ("Exception: An instruction is unknown");
+    return ("Exception: An instruction is unknown or syntax wrong");
 }
 
 ValidationManager::ExceptionExitDoesntExists::ExceptionExitDoesntExists() {}
 
 const char *ValidationManager::ExceptionExitDoesntExists::what() const throw() {
-    return ("Exception: The program doesn’t have an exit instruction");
+    return ("Exception: The program doesn't have an exit instruction");
 }
