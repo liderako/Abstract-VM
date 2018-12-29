@@ -9,7 +9,7 @@
 
 class Parser {
 	public:
-		void run(VirtualMachine vm, std::vector<std::string> inputBuffer);
+    std::vector<std::string> run(std::string buffer);
 };
 
 #endif

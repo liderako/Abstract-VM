@@ -20,7 +20,6 @@ int main(int argc, char **argv) {
 	}
 	else if (argc == 2) {
 		readManager.readFile(argv[1]);
-		readManager.printBuffer();
 		execution(readManager);
 	}
 	else {

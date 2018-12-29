@@ -20,7 +20,6 @@ class ReadManager {
 		// [ACTION]
 		void readFile(std::string filename);
 		void readConsole();
-		void printBuffer();
 		void deleteComment();
 
 

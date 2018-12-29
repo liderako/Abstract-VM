@@ -74,6 +74,11 @@ std::string Operand<T>::getValue() const {
 }
 
 template <class T>
+std::string const & Operand<T>::toString(void) const {
+    return (this->value);
+}
+
+template <class T>
 IOperand const * Operand<T>::operator+(IOperand const & rhs) const {
     eOperandType e = (rhs.getPrecision() > this->getPrecision() ? rhs.getType() : this->getType());
     return (new Operand(e, std::to_string( std::stod(this->toString()) + std::stod(rhs.toString()) )));
@@ -122,14 +127,9 @@ IOperand const * Operand<T>::operator%(IOperand const & rhs) const {
 }
 
 template <class T>
-std::string const & Operand<T>::toString(void) const {
-    return (this->value);
-}
-
-template <class T>
 Operand<T>::ExceptionDivisionByZero::ExceptionDivisionByZero() {}
 
 template <class T>
 const char *Operand<T>::ExceptionDivisionByZero::what() const throw() {
-    return ("Error: Division by zero");
+    return ("Exception: Division by zero");
 }

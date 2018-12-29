@@ -13,11 +13,11 @@ IOperand const *OperandFactory::createInt32( std::string const & value ) const {
 }
 
 IOperand const *OperandFactory::createFloat( std::string const & value ) const {
-    return (new Operand<float>(eOperandType::Double, value));
+    return (new Operand<float>(eOperandType::Float, value));
 }
 
 IOperand const *OperandFactory::createDouble( std::string const & value ) const {
-    return (new Operand<double>(eOperandType::Float, value));
+    return (new Operand<double>(eOperandType::Double, value));
 }
 
 IOperand const *OperandFactory::createOperand( eOperandType type, std::string const & value ) const {

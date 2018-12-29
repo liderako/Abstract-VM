@@ -17,6 +17,13 @@ class ValidationManager {
                 const char * what() const throw();
                 ~ExceptionInstructionUnknown() throw() {}
         };
+
+        class ExceptionExitDoesntExists : public std::exception {
+            public:
+                ExceptionExitDoesntExists();
+                const char * what() const throw();
+                ~ExceptionExitDoesntExists() throw() {}
+        };
 };
 
 #endif

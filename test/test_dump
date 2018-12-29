@@ -1,0 +1,7 @@
+push int32(0)
+push int8(1)
+push int16(2)
+push float(2.2)
+push double(3.3)
+dump
+exit

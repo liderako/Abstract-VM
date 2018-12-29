@@ -43,7 +43,7 @@ void ReadManager::readConsole() {
 		}
 		else {
 				std::cout << "Error read input\n";
-				std::exit(-1);
+				std::exit(-1); ////////////////////////////////
 		}
 	}
 	if (inputBuffer.size() > 0) {
@@ -66,12 +66,6 @@ void ReadManager::deleteComment() {
 			inputBuffer.erase(inputBuffer.begin() + i);
 			i--;
 		}
-	}
-}
-
-void ReadManager::printBuffer() {
-	for (unsigned long i = 0; i < inputBuffer.size(); i++) {
-		std::cout << inputBuffer[i] << "\n";
 	}
 }
 
